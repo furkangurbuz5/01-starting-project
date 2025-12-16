@@ -8,5 +8,5 @@ import {Component, Input} from '@angular/core';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
-  @Input() userName!: string;
+  @Input() userName?: string;
 }
