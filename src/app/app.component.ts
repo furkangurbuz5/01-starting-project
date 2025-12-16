@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {HeaderComponent} from './header/header.component';
 import {UserComponent} from './user/user.component';
-import {DUMMY_USERS} from "./users";
+import {DUMMY_USERS, User} from "./users";
 import {TaskComponent} from "./task/task.component";
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent {
     return this.users.find(user => user.id === this.selectedUserId)!;
   }
 
-  onSelectUser(id: string) {
-    this.selectedUserId = id;
+  onSelectUser(user: User) {
+    this.selectedUserId = user.id;
   }
 }
