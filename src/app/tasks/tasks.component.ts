@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import { TaskComponent} from "./task/task.component";
+import {TaskComponent} from "./task/task.component";
+import {tasks} from "./tasks"
 
 @Component({
   selector: 'app-tasks',
@@ -9,13 +10,11 @@ import { TaskComponent} from "./task/task.component";
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  @Input() userName?: string;
-  tasks = [
-    {
-      id: 1,
-      title: 'Learn angular at a professional level',
-      summary: 'Learn the basic and advanced features of angular and how to apply them so that we can get a better job.',
-      dueDate: '2026-03-31'
-    }
-  ]
+  @Input({required: true}) userId?: string;
+  @Input({required: true}) userName?: string;
+
+  get selectedUserTasks() {
+    return tasks.filter((task) => task.userId === this.userId)
+  }
+
 }

@@ -6,7 +6,7 @@ export interface Task {
   dueDate: string,
 }
 
-const tasks: Task[] = [
+export const tasks: Task[] = [
   {
     id: 't1',
     userId: 'u1',
