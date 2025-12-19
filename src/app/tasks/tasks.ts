@@ -1,10 +1,4 @@
-export interface Task {
-  id: string,
-  userId: string,
-  title: string,
-  summary: string,
-  dueDate: string,
-}
+import { Task } from './task/task.model'
 
 export const tasks: Task[] = [
   {
