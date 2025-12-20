@@ -29,7 +29,7 @@ export class TasksComponent {
     this.isAddingTask = true;
   }
 
-  onCancelAddTask(cancel: boolean) {
-    this.isAddingTask = cancel;
+  onCancelAddTask(event: boolean) {
+    this.isAddingTask = !event;
   }
 }
